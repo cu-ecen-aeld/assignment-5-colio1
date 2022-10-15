@@ -11,7 +11,11 @@
 #AESD_ASSIGNMENTS_VERSION = 8a8a27ded8b59259dc1953a3ba74e343f6c2667c
 #AESD_ASSIGNMENTS_VERSION = 4a4b17920f85b11213bac1d95670fc427a82b9ed
 #AESD_ASSIGNMENTS_VERSION = 'ab1d246a091bb346578e63aae39e71cda7e77c1d'
-AESD_ASSIGNMENTS_VERSION = '356841accd37a920062ab73e9609866fc4e039a5'
+#AESD_ASSIGNMENTS_VERSION = '356841accd37a920062ab73e9609866fc4e039a5'
+#AESD_ASSIGNMENTS_VERSION = 'ee5a4a23302854f54ab6a78ea8cbf2bccde9c399'
+#AESD_ASSIGNMENTS_VERSION = '18a7a6b6da62991e58026f3617ec926641fb9fd1'
+#AESD_ASSIGNMENTS_VERSION = '67de042b848640fc47c18206d457216a063b0dc7'
+AESD_ASSIGNMENTS_VERSION = '4b6cdaf1cdd08a9840f055435bd71f028744e8fd'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -20,7 +24,8 @@ AESD_ASSIGNMENTS_SITE_METHOD = git
 AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
-	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app CROSS_COMPILE=aarch64-none-linux-gnu- all
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app clean
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app all
 endef
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
@@ -32,7 +37,6 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder.sh $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/usr/bin
-	
 endef
 
 $(eval $(generic-package))
