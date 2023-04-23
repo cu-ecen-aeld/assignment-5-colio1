@@ -16,7 +16,12 @@
 #AESD_ASSIGNMENTS_VERSION = '18a7a6b6da62991e58026f3617ec926641fb9fd1'
 #AESD_ASSIGNMENTS_VERSION = '67de042b848640fc47c18206d457216a063b0dc7'
 #AESD_ASSIGNMENTS_VERSION = '4b6cdaf1cdd08a9840f055435bd71f028744e8fd'
+<<<<<<< HEAD
 AESD_ASSIGNMENTS_VERSION = '4ff4e2ed59bc014e643fa9fdca1fd8b38a29cf58'
+=======
+#AESD_ASSIGNMENTS_VERSION = '4ff4e2ed59bc014e643fa9fdca1fd8b38a29cf58'
+AESD_ASSIGNMENTS_VERSION = '835484b82ba5e99e38f71209953cbcafe43dce1a'
+>>>>>>> assignment-4-remote/master
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -38,9 +43,10 @@ define AESD_ASSIGNMENTS_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder.sh $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/finder-test.sh $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/finder-app/writer $(TARGET_DIR)/usr/bin
-	
+
 	$(INSTALL) -m 0755 $(@D)/server/aesdsocket $(TARGET_DIR)/usr/bin
 	$(INSTALL) -m 0755 $(@D)/server/aesdsocket-start-stop $(TARGET_DIR)/etc/init.d/S99aesdsocket
+
 endef
 
 $(eval $(generic-package))
