@@ -19,7 +19,6 @@
 #AESD_ASSIGNMENTS_VERSION = '4ff4e2ed59bc014e643fa9fdca1fd8b38a29cf58'
 #AESD_ASSIGNMENTS_VERSION = '835484b82ba5e99e38f71209953cbcafe43dce1a'
 AESD_ASSIGNMENTS_VERSION = 'e5f1e2d204b1ed929421ef0d0651667a6b0d4f23'
->>>>>>> assignment-4-remote/master
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
